@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          android-bff:
+            provider: okta
+            client-id: 0oaoo8isrxu1mzw0v5d7
+            client-secret: 7_19R9zEOf6PmGMcGddhYim4AhTGf2gEGmn90RlopSL0dIOMYlWMEOZuqMSHEX1b
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://localhost:8080/login/oauth2/code/android-bff"
+            scope: openid,profile
+            client-name: android-bff
+        provider:
+          okta:
+            issuer-uri: https://dev-93948303.okta.com
+
+app:
+  base-uri: http://127.0.0.1:4200
